@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_can_package_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:rowCount="6"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="15dp"
+    android:useDefaultMargins="true">
+
+    <TextView
+        android:id="@+id/sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="할인"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_gravity="fill"/>
+
+    <LinearLayout
+        android:id="@+id/sale_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="fill"
+        android:layout_columnWeight="1">
+        <TextView
+            android:id="@+id/sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="2000원"
+            android:textStyle="bold"
+            android:textColor="#EAB003"
+            android:textSize="15sp"
+            android:gravity="fill"/>
+        <TextView
+            android:id="@+id/sale_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="11000원 이상 포장 시 할인됩니다."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="fill"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최소주문금액"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_gravity="fill"/>
+
+    <TextView
+        android:id="@+id/minimum_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="없음"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이용방법"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:id="@+id/how_to_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="포장"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:id="@+id/cook_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조리시간"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:id="@+id/cook_time_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="6~26분 소요 예상"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="위치안내"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_gravity="fill"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="fill"
+        android:layout_columnWeight="1">
+        <TextView
+            android:id="@+id/address_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울특별시 은평구 녹번동 282-2 2층 101호 (녹번동)"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/address_farfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(배달주소로부터 약 874m)"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+        <RelativeLayout
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pay_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제방법"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+
+    <TextView
+        android:id="@+id/pay_type_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="바로결제"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="fill"/>
+</GridLayout>

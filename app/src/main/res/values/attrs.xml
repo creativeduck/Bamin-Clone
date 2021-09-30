@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomMainMenu">
+        <attr name="title" format="reference|string"/>
+        <attr name="this_content" format="reference|string"/>
+        <attr name="img" format="reference|integer"/>
+        <attr name="back" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomMainRecyclerView">
+        <attr name="recycler_title" format="reference|string"/>
+        <attr name="showmore" format="reference|string"/>
+        <attr name="recycler_image" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTodaySale">
+        <attr name="today_sale_logo" format="reference|integer"/>
+        <attr name="today_sale_condition" format="reference|string"/>
+        <attr name="today_sale_sale" format="reference|string"/>
+        <attr name="today_sale_content1" format="reference|string"/>
+        <attr name="today_sale_content2" format="reference|string"/>
+        <attr name="today_sale_image" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomMainMenuAd">
+        <attr name="custom_main_menu_viewpager_ad" format="reference|string"/>
+        <attr name="custom_main_menu_cur" format="reference|string"/>
+        <attr name="custom_main_menu_tot" format="reference|string"/>
+        <attr name="custom_main_menu_show_all" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="GridItem">
+        <attr name="grid_image" format="reference|integer"/>
+        <attr name="grid_text" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="FoodItem">
+        <attr name="food_item_image" format="reference|integer"/>
+        <attr name="food_item_title" format="reference|string"/>
+        <attr name="food_item_time" format="reference|string"/>
+        <attr name="food_item_menu" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SelectMenuFoodItem">
+        <attr name="select_menu_food_item_image" format="reference|integer"/>
+        <attr name="select_menu_food_item_title" format="reference|string"/>
+        <attr name="select_menu_food_item_rating" format="reference|string"/>
+        <attr name="select_menu_food_item_menu" format="reference|string"/>
+        <attr name="select_menu_food_item_time" format="reference|string"/>
+        <attr name="select_menu_food_item_price" format="reference|string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="AddressItem">
+        <attr name="address_item_image" format="reference|integer"/>
+        <attr name="address_item_title" format="reference|string"/>
+        <attr name="address_item_content" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomFastestItem">
+        <attr name="custom_fastest_image" format="reference|integer"/>
+        <attr name="custom_fastest_rating" format="reference|string"/>
+        <attr name="custom_fastest_tips" format="reference|string"/>
+        <attr name="custom_fastest_time" format="reference|string"/>
+        <attr name="custom_fastest_title" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomMenuLinear">
+        <attr name="custom_menu_linear_title" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemSpecificMenu">
+        <attr name="item_specific_menu_title" format="reference|string"/>
+        <attr name="item_specific_menu_detail" format="reference|string"/>
+        <attr name="item_specific_menu_price" format="reference|string"/>
+        <attr name="item_specific_menu_image" format="reference|integer"/>
+    </declare-styleable>
+</resources>

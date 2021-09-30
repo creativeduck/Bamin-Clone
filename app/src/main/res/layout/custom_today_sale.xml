@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_today_sale_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/skyblue"
+    android:layout_marginBottom="15dp"
+    android:layout_marginEnd="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintbox"
+        android:layout_width="300dp"
+        android:layout_height="170dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.8"
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintEnd_toStartOf="@id/today_sale_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:id="@+id/today_sale_logo"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/logo_dominos"
+                app:layout_constraintBottom_toTopOf="@+id/today_sale_condition"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/today_sale_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도미노피자 전 메뉴"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/today_sale_sale"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/today_sale_logo" />
+
+            <TextView
+                android:id="@+id/today_sale_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7천원 할인"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/today_sale_content1"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/today_sale_condition" />
+
+            <TextView
+                android:id="@+id/today_sale_content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기간:9/13~9/23"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/today_sale_content2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/today_sale_sale" />
+
+            <TextView
+                android:id="@+id/today_sale_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/today_sale_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/today_sale_content1" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/today_sale_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintHorizontal_weight="1"
+            android:src="@drawable/today_sale_food_domino"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mainLinear"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/alarm"
+        android:icon="@drawable/ic_alarm_shape"
+        android:title="알람센터"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/mybamin"
+        android:icon="@drawable/ic_mybamin_shape"
+        android:title="My배민"
+        app:showAsAction="ifRoom"/>
+</menu>

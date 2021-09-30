@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="false">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+            android:minHeight="?attr/actionBarSize"
+            app:collapsedTitleGravity="center"
+            app:collapsedTitleTextAppearance="@style/tab_text"
+            android:background="@android:color/transparent"
+            app:scrimAnimationDuration="200"
+            app:contentScrim="@color/white"
+            app:statusBarScrim="@color/white"
+            >
+            <ImageView
+                android:id="@+id/specific_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/food_item_one"
+                android:transitionName="movieWork"
+                android:scaleType="centerCrop"/>
+            <View
+                android:id="@+id/tmpview"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/specific_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                app:layout_collapseMode="pin"
+                app:contentInsetLeft="0dp"
+                android:background="@android:color/transparent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp">
+                    <TextView
+                        android:id="@+id/toolbar_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="얼음골칡냉면"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.ssacproject.thirdweek.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/stickyScrollView"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:nestedScrollingEnabled="true"
+        android:background="@color/main_menu"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <include layout="@layout/item_specific_info"
+                    android:id="@+id/card_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="최대 3,000원 쿠폰 받기"
+                    android:gravity="center"
+                    android:textColor="#ED930D"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/linear_shape"
+                    android:drawableStart="@drawable/ic_coupon_shape"
+                    android:drawableEnd="@drawable/ic_download_shape"
+                    android:paddingEnd="70dp"
+                    android:paddingStart="70dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"/>
+            </LinearLayout>
+
+            <include layout="@layout/grid_delivery_only"
+                android:id="@+id/delivery_only"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/can_package_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="5dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorColor="@color/black"
+                app:tabSelectedTextColor="@color/black"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@style/tab_text"/>
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/stick_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/specific_tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="bottom"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabTextColor="@color/gray"
+                    app:tabIndicatorGravity="top"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabMode="fixed"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabIndicatorColor="@color/black">
+                </com.google.android.material.tabs.TabLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/fromText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원산지 표기"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:padding="7dp"
+                            android:background="@drawable/linear_shape"
+                            android:layout_margin="10dp"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="invisible"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/specific_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </com.ssacproject.thirdweek.StickyScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/specific_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_fab"
+        app:backgroundTint="@color/bamin"
+        app:tint="@color/white"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

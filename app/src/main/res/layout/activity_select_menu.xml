@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectMenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="1인분"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:tabIndicatorHeight="5dp"
+        app:tabTextColor="@color/gray"
+        app:tabGravity="start"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/black"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabIndicatorColor="@color/black"/>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintBottom_toTopOf="@+id/viewpager"
+        android:fillViewport="true">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/reset_shape"
+                app:chipBackgroundColor="@color/white"
+                app:rippleColor="@color/checked_chip"
+                android:textColor="@color/chip_selected_text_color"
+                android:visibility="gone"
+                android:textStyle="bold"
+                app:checkedIconEnabled="false"
+                android:text="초기화" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFastest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/icon_fast_shape"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:rippleColor="@android:color/transparent"
+                app:checkedIcon="@drawable/icon_fast_shape"
+                app:chipIconTint="@color/bamin"
+                app:checkedIconTint="@color/chip_selected_text_color"
+                android:layout_marginStart="10dp"
+                android:text="배달 빠른 순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTipLowest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipIcon="@drawable/ic_baseline_south_24"
+                app:checkedIcon="@drawable/ic_baseline_south_checked_24"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:rippleColor="@android:color/transparent"
+                android:text="배달팁 낮은 순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:rippleColor="@android:color/transparent"
+                app:checkedIconEnabled="false"
+                android:text="기본순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMostOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:checkedIconEnabled="false"
+                app:rippleColor="@android:color/transparent"
+                android:text="주문 많은 순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:checkedIconEnabled="false"
+                app:rippleColor="@android:color/transparent"
+                android:text="별점 높은 순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:checkedIconEnabled="false"
+                app:rippleColor="@android:color/transparent"
+                android:text="가까운 순" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:checkedIconEnabled="false"
+                app:rippleColor="@android:color/transparent"
+                android:text="찜 많은 순" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLeastPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:checkedIconEnabled="true"
+                app:checkedIcon="@drawable/ic_baseline_expand_more_24"
+                app:checkedIconTint="@color/chip_selected_text_color"
+                app:chipIconEnabled="false"
+                app:rippleColor="@android:color/transparent"
+
+                android:text="최소주문금액" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEtc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:chipBackgroundColor="@drawable/chip_state_selector"
+                android:textColor="@drawable/chip_text_selector"
+                android:checkable="true"
+                app:rippleColor="@android:color/transparent"
+                app:checkedIconEnabled="false"
+                app:chipIcon="@drawable/ic_baseline_tune_24"
+                android:text="기타" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

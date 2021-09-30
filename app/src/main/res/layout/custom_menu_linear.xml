@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_menu">
+
+    <TextView
+        android:id="@+id/custom_menu_linear_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="세트메뉴"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/explainIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_close_explain"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"/>
+    <View
+        android:id="@+id/custom_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#C1C1C1"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_menu_linear_title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/custom_menu_lienar_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_line"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:background="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search"
+        android:title="검색"
+        android:icon="@drawable/bottom_navi_search"/>
+    <item android:id="@+id/heart"
+        android:title="찜"
+        android:icon="@drawable/bottom_navi_heart"/>
+    <item android:id="@+id/go_home"
+        android:title=""
+        app:showAsAction="never"/>
+    <item android:id="@+id/order_history"
+        android:title="주문내역"
+        android:icon="@drawable/bottom_navi_lst"/>
+    <item android:id="@+id/my_bamin"
+        android:title="My배민"
+        android:icon="@drawable/bottom_navi_mybamin"/>
+
+</menu>

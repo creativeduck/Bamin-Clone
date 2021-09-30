@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/custom_fastest_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedLittleCorners"
+        android:src="@drawable/icon_image" />
+
+
+    <LinearLayout
+        android:id="@+id/custom_fastest_linear1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_fastest_image">
+        <TextView
+            android:id="@+id/custom_fastest_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="파스타집이야 역삼점"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:maxLength="8"
+            android:maxLines="1"/>
+        <ImageView
+            android:id="@+id/custom_fastest_star"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_star_24"/>
+        <TextView
+            android:id="@+id/custom_fastest_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.6"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/custom_fastest_howmuch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_fastest_linear1"
+        android:layout_marginTop="7dp"
+        android:text="배달팁"
+        android:textSize="15sp"
+        android:textColor="@color/gray"/>
+    <TextView
+        android:id="@+id/custom_fastest_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/custom_fastest_howmuch"
+        app:layout_constraintTop_toBottomOf="@+id/custom_fastest_linear1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:text="무료"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/custom_fastest_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="13~23분"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:background="@drawable/baminone_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_fastest_howmuch"
+        android:drawableStart="@drawable/logo_baminone_mint"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
